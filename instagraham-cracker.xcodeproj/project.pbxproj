@@ -14,6 +14,8 @@
 		7FE035F01C8E8CF600A6B636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FE035EE1C8E8CF600A6B636 /* LaunchScreen.storyboard */; };
 		7FE035FB1C8E8CF600A6B636 /* instagraham_crackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE035FA1C8E8CF600A6B636 /* instagraham_crackerTests.swift */; };
 		7FE036061C8E8CF600A6B636 /* instagraham_crackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE036051C8E8CF600A6B636 /* instagraham_crackerUITests.swift */; };
+		7FE036141C8E984300A6B636 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE036131C8E984300A6B636 /* LoginViewController.swift */; };
+		EDAFE02D40BCBF43A42ECC39 /* Pods_instagraham_cracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57952FEAD410932CE9B525A9 /* Pods_instagraham_cracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57952FEAD410932CE9B525A9 /* Pods_instagraham_cracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagraham_cracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F7F318F58D0545285235977 /* Pods-instagraham-cracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagraham-cracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instagraham-cracker/Pods-instagraham-cracker.debug.xcconfig"; sourceTree = "<group>"; };
 		7FE035E21C8E8CF600A6B636 /* instagraham-cracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "instagraham-cracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE035E51C8E8CF600A6B636 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FE035E71C8E8CF600A6B636 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		7FE036011C8E8CF600A6B636 /* instagraham-crackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "instagraham-crackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE036051C8E8CF600A6B636 /* instagraham_crackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagraham_crackerUITests.swift; sourceTree = "<group>"; };
 		7FE036071C8E8CF600A6B636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FE036131C8E984300A6B636 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BC512C4C443EBE5C6EE9BA3E /* Pods-instagraham-cracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagraham-cracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-instagraham-cracker/Pods-instagraham-cracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDAFE02D40BCBF43A42ECC39 /* Pods_instagraham_cracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,8 @@
 				7FE035F91C8E8CF600A6B636 /* instagraham-crackerTests */,
 				7FE036041C8E8CF600A6B636 /* instagraham-crackerUITests */,
 				7FE035E31C8E8CF600A6B636 /* Products */,
+				F014A84C34AF1510682B86DF /* Pods */,
+				D7D20AF12C5D3950E8C69F1A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +112,7 @@
 				7FE035EC1C8E8CF600A6B636 /* Assets.xcassets */,
 				7FE035EE1C8E8CF600A6B636 /* LaunchScreen.storyboard */,
 				7FE035F11C8E8CF600A6B636 /* Info.plist */,
+				7FE036131C8E984300A6B636 /* LoginViewController.swift */,
 			);
 			path = "instagraham-cracker";
 			sourceTree = "<group>";
@@ -125,6 +135,23 @@
 			path = "instagraham-crackerUITests";
 			sourceTree = "<group>";
 		};
+		D7D20AF12C5D3950E8C69F1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57952FEAD410932CE9B525A9 /* Pods_instagraham_cracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F014A84C34AF1510682B86DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F7F318F58D0545285235977 /* Pods-instagraham-cracker.debug.xcconfig */,
+				BC512C4C443EBE5C6EE9BA3E /* Pods-instagraham-cracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FE0360A1C8E8CF600A6B636 /* Build configuration list for PBXNativeTarget "instagraham-cracker" */;
 			buildPhases = (
+				BA19CED5C6FB4B329A6D2ECB /* Check Pods Manifest.lock */,
 				7FE035DE1C8E8CF600A6B636 /* Sources */,
 				7FE035DF1C8E8CF600A6B636 /* Frameworks */,
 				7FE035E01C8E8CF600A6B636 /* Resources */,
+				E06B11B8BA439C61F07276DA /* Embed Pods Frameworks */,
+				5C22C202EE76B2BCBBC8935F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,11 +284,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C22C202EE76B2BCBBC8935F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-instagraham-cracker/Pods-instagraham-cracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA19CED5C6FB4B329A6D2ECB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E06B11B8BA439C61F07276DA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-instagraham-cracker/Pods-instagraham-cracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7FE035DE1C8E8CF600A6B636 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE036141C8E984300A6B636 /* LoginViewController.swift in Sources */,
 				7FE035E81C8E8CF600A6B636 /* ViewController.swift in Sources */,
 				7FE035E61C8E8CF600A6B636 /* AppDelegate.swift in Sources */,
 			);
@@ -398,6 +477,7 @@
 		};
 		7FE0360B1C8E8CF600A6B636 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F7F318F58D0545285235977 /* Pods-instagraham-cracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "instagraham-cracker/Info.plist";
@@ -409,6 +489,7 @@
 		};
 		7FE0360C1C8E8CF600A6B636 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC512C4C443EBE5C6EE9BA3E /* Pods-instagraham-cracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "instagraham-cracker/Info.plist";
@@ -485,6 +566,7 @@
 				7FE0360C1C8E8CF600A6B636 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FE0360D1C8E8CF600A6B636 /* Build configuration list for PBXNativeTarget "instagraham-crackerTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +575,7 @@
 				7FE0360F1C8E8CF600A6B636 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FE036101C8E8CF600A6B636 /* Build configuration list for PBXNativeTarget "instagraham-crackerUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +584,7 @@
 				7FE036121C8E8CF600A6B636 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
