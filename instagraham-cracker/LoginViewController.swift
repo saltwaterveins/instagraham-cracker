@@ -27,17 +27,31 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signIn(sender: AnyObject) {
-        PFUser.logInWithUsername(usernameField.text!, password: passField.text!) {
+//        PFUser.logInWithUsername(usernameField.text!, passField.text!) {
+//            (user: PFUser?, error: NSError) -> Void in
+//            if user != nil {
+//                print("You logged in")
+//                self.performSegueWithIdentifier("loginSegue", sender: nil)
+//            }
+//        }
+//        
+        PFUser.logInWithUsernameInBackground(usernameField.text!, password: passField.text!) { (user: PFUser?, error: NSError?) -> Void in
+            if user != nil {
+                print("You logged in")
+                self.performSegueWithIdentifier("loginSegue", sender: nil)
+            }
+        }
+        /*PFUser.logInWithUsername(usernameField.text!, password: passField.text!) {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
                 print("you are logged in")
                 self.performSegueWithIdentifier("loginSegue", sender: nil)
             }
-        }
+        }*/
     }
 
     @IBAction func signUp(sender: AnyObject) {
-        let newUser = PFUser()!
+        let newUser = PFUser()
         newUser.username = usernameField.text
         newUser.password = passField.text
         
