@@ -70,46 +70,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3e-qJ-TPM">
-                                <rect key="frame" x="20" y="82" width="79" height="79"/>
+                                <rect key="frame" x="20" y="28" width="79" height="79"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L90-pB-iIJ">
-                                <rect key="frame" x="260" y="169" width="35" height="30"/>
+                                <rect key="frame" x="260" y="115" width="35" height="30"/>
                                 <state key="normal" title="Post!"/>
                                 <connections>
                                     <action selector="composeTapped:" destination="LYS-t9-LrH" eventType="touchUpInside" id="0Lp-jN-a63"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8b-IH-eRG">
-                                <rect key="frame" x="20" y="169" width="99" height="30"/>
+                                <rect key="frame" x="20" y="115" width="99" height="30"/>
                                 <state key="normal" title="Choose Image"/>
                                 <connections>
                                     <action selector="addImageTapped:" destination="LYS-t9-LrH" eventType="touchUpInside" id="Wyr-5B-U3U"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Tw-Bw-IbR">
-                                <rect key="frame" x="107" y="82" width="188" height="79"/>
+                                <rect key="frame" x="107" y="28" width="188" height="79"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1G5-kb-BhE">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Post" id="Cj2-FC-Kb1">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Nce-YP-XMy">
-                                            <connections>
-                                                <segue destination="fAx-wI-sbD" kind="push" id="MiE-EP-Gte"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="daW-af-gNO">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="0x5-Wt-AFC"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="daW-af-gNO"/>
                     <connections>
                         <outlet property="caption" destination="0Tw-Bw-IbR" id="FMm-Bu-UdO"/>
                         <outlet property="image" destination="a3e-qJ-TPM" id="BmA-x3-WIw"/>
@@ -117,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYb-Xw-5HB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1581" y="-358"/>
+            <point key="canvasLocation" x="1489" y="-490"/>
         </scene>
         <!--Insta View Controller-->
         <scene sceneID="Chg-4X-fFR">
@@ -136,7 +122,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCellTableViewCell" rowHeight="427" id="Gn7-sd-qLk" userLabel="FeedCellTableViewCell" customClass="FeedCellTableViewCell" customModule="instagraham_cracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="427"/>
+                                        <rect key="frame" x="0.0" y="92" width="320" height="427"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gn7-sd-qLk" id="87e-7e-LfM">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="426.5"/>
@@ -145,15 +131,6 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nmc-js-rRc">
                                                     <rect key="frame" x="17" y="0.0" width="286" height="286"/>
                                                 </imageView>
-                                                <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lts-g2-dJj" customClass="TabBar">
-                                                    <rect key="frame" x="0.0" y="189" width="320" height="49"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <items>
-                                                        <tabBarItem title="Home" id="GSl-sR-CdE"/>
-                                                        <tabBarItem title="Post" id="WXc-l2-Vgu"/>
-                                                        <tabBarItem title="Profile" id="c0Y-gB-NKi"/>
-                                                    </items>
-                                                </tabBar>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hhhhhhh" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1O-y3-jlw">
                                                     <rect key="frame" x="17" y="294" width="1695" height="111.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -173,7 +150,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="TBi-yy-pEj">
-                        <barButtonItem key="leftBarButtonItem" title="Post" id="8zX-Kn-Umr"/>
+                        <barButtonItem key="leftBarButtonItem" title="Post" id="8zX-Kn-Umr">
+                            <connections>
+                                <segue destination="LYS-t9-LrH" kind="push" id="yTc-zU-Egb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="hlD-cG-8kr">
                             <connections>
                                 <action selector="logOutClicked:" destination="fAx-wI-sbD" id="8jT-70-USJ"/>
@@ -210,7 +191,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MiE-EP-Gte"/>
         <segue reference="VU9-8Y-eK6"/>
     </inferredMetricsTieBreakers>
 </document>
