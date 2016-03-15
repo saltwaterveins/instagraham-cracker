@@ -15,6 +15,10 @@
 		7FE035FB1C8E8CF600A6B636 /* instagraham_crackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE035FA1C8E8CF600A6B636 /* instagraham_crackerTests.swift */; };
 		7FE036061C8E8CF600A6B636 /* instagraham_crackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE036051C8E8CF600A6B636 /* instagraham_crackerUITests.swift */; };
 		7FE036141C8E984300A6B636 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE036131C8E984300A6B636 /* LoginViewController.swift */; };
+		7FE036161C962B6D00A6B636 /* FeedCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE036151C962B6D00A6B636 /* FeedCellTableViewCell.swift */; };
+		7FE036181C96331200A6B636 /* InstaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE036171C96331200A6B636 /* InstaViewController.swift */; };
+		7FE0361A1C966A1300A6B636 /* userPersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE036191C966A1300A6B636 /* userPersonalData.swift */; };
+		7FE0361C1C97D6D700A6B636 /* postingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0361B1C97D6D700A6B636 /* postingViewController.swift */; };
 		EDAFE02D40BCBF43A42ECC39 /* Pods_instagraham_cracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57952FEAD410932CE9B525A9 /* Pods_instagraham_cracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +56,10 @@
 		7FE036051C8E8CF600A6B636 /* instagraham_crackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagraham_crackerUITests.swift; sourceTree = "<group>"; };
 		7FE036071C8E8CF600A6B636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FE036131C8E984300A6B636 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7FE036151C962B6D00A6B636 /* FeedCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCellTableViewCell.swift; sourceTree = "<group>"; };
+		7FE036171C96331200A6B636 /* InstaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaViewController.swift; sourceTree = "<group>"; };
+		7FE036191C966A1300A6B636 /* userPersonalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userPersonalData.swift; sourceTree = "<group>"; };
+		7FE0361B1C97D6D700A6B636 /* postingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postingViewController.swift; sourceTree = "<group>"; };
 		BC512C4C443EBE5C6EE9BA3E /* Pods-instagraham-cracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagraham-cracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-instagraham-cracker/Pods-instagraham-cracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +117,10 @@
 				7FE035E51C8E8CF600A6B636 /* AppDelegate.swift */,
 				7FE035E71C8E8CF600A6B636 /* ViewController.swift */,
 				7FE035E91C8E8CF600A6B636 /* Main.storyboard */,
+				7FE0361B1C97D6D700A6B636 /* postingViewController.swift */,
+				7FE036191C966A1300A6B636 /* userPersonalData.swift */,
+				7FE036171C96331200A6B636 /* InstaViewController.swift */,
+				7FE036151C962B6D00A6B636 /* FeedCellTableViewCell.swift */,
 				7FE035EC1C8E8CF600A6B636 /* Assets.xcassets */,
 				7FE035EE1C8E8CF600A6B636 /* LaunchScreen.storyboard */,
 				7FE035F11C8E8CF600A6B636 /* Info.plist */,
@@ -337,8 +349,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE0361A1C966A1300A6B636 /* userPersonalData.swift in Sources */,
+				7FE0361C1C97D6D700A6B636 /* postingViewController.swift in Sources */,
 				7FE036141C8E984300A6B636 /* LoginViewController.swift in Sources */,
+				7FE036161C962B6D00A6B636 /* FeedCellTableViewCell.swift in Sources */,
 				7FE035E81C8E8CF600A6B636 /* ViewController.swift in Sources */,
+				7FE036181C96331200A6B636 /* InstaViewController.swift in Sources */,
 				7FE035E61C8E8CF600A6B636 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
