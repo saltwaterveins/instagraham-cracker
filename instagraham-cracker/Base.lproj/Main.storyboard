@@ -122,7 +122,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCellTableViewCell" rowHeight="427" id="Gn7-sd-qLk" userLabel="FeedCellTableViewCell" customClass="FeedCellTableViewCell" customModule="instagraham_cracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="427"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="427"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gn7-sd-qLk" id="87e-7e-LfM">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="426.5"/>
@@ -134,7 +134,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hhhhhhh" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1O-y3-jlw">
                                                     <rect key="frame" x="17" y="294" width="1695" height="111.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
