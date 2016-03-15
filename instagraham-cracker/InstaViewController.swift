@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class InstaViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class InstaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var userStuff : [PFObject]?
     var refresh : UIRefreshControl!
@@ -22,16 +22,16 @@ class InstaViewController: UIViewController,UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
-                self.refresh = UIRefreshControl()
+        
+        self.refresh = UIRefreshControl()
         self.refresh.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refresh.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refresh)
         
-        let query = PFQuery(className: "UserMedia")
-        query.orderByDescending("_created_at")
-        query.limit = 20
-        
-        query.findObjectsInBackgroundWithBlock { (media: [PFObject]?, error: NSError?) -> Void in
+        let list = PFQuery(className: "userStuff")
+        list.orderByDescending("_created_at")
+        list.limit = 20
+        list.findObjectsInBackgroundWithBlock { (media: [PFObject]?, error: NSError?) -> Void in
             if media != nil {
                 self.userStuff = media
                 self.tableView.reloadData()
@@ -59,8 +59,9 @@ class InstaViewController: UIViewController,UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCellWithIdentifier("FeedCellTableViewCell", forIndexPath: indexPath) as! FeedCellTableViewCell
         let us = userStuff![indexPath.row]
         cell.FeedLabel.text = us["caption"] as? String
-        let userImageFile = us["media"] as! PFFile
-        userImageFile.getDataInBackgroundWithBlock {
+        
+        let image = us["media"] as! PFFile
+        image.getDataInBackgroundWithBlock {
             (imageData: NSData?, error: NSError?) -> Void in
             if error == nil {
                 if let imageData = imageData {
@@ -73,7 +74,7 @@ class InstaViewController: UIViewController,UITableViewDelegate, UITableViewData
     }
     
     func refresh(sender: AnyObject) {
-        let query = PFQuery(className: "UserMedia")
+        let query = PFQuery(className: "userStuff")
         query.orderByDescending("_created_at")
         query.limit = 20
         
@@ -91,25 +92,11 @@ class InstaViewController: UIViewController,UITableViewDelegate, UITableViewData
     @IBAction func logOutClicked(sender: AnyObject) {
         PFUser.logOutInBackgroundWithBlock { (error: NSError?) -> Void in
             if error == nil {
-                print("User logged out")
                 self.performSegueWithIdentifier("logout", sender: nil)
             }
-            else {
-                print("Error while logging out")
-            }
+
         }
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -15,7 +15,7 @@ class userPersonalData: NSObject {
         let stuff = PFObject(className: "UserMedia")
         
         // Add relevant fields to the object
-        stuff["media"] = getPFFileFromImage(image) // PFFile column type
+        stuff["media"] = getImage(image) // PFFile column type
         stuff["author"] = PFUser.currentUser() // Pointer column type that points to PFUser
         stuff["caption"] = caption
         stuff["likesCount"] = 0
@@ -24,11 +24,10 @@ class userPersonalData: NSObject {
     }
     
     
-    
-    class func getPFFileFromImage(image: UIImage?) -> PFFile? {
+    class func getImage(image: UIImage?) -> PFFile? {
         if let image = image {
-            if let imageData = UIImagePNGRepresentation(image) {
-                return PFFile(name: "image.png", data: imageData)
+            if let photo = UIImagePNGRepresentation(image) {
+                return PFFile(name: "image.png", data: photo)
             }
         }
         return nil

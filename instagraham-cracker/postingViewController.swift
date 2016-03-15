@@ -18,10 +18,10 @@ class postingViewController: UIViewController,UIImagePickerControllerDelegate, U
         super.viewDidLoad()
         
         caption.delegate = self
-        var imageView = image
+        var photo = image
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:Selector("addImageTapped:"))
-        imageView.userInteractionEnabled = true
-        imageView.addGestureRecognizer(tapGestureRecognizer)
+        photo.userInteractionEnabled = true
+        photo.addGestureRecognizer(tapGestureRecognizer)
 
         // Do any additional setup after loading the view.
     }
@@ -32,36 +32,12 @@ class postingViewController: UIViewController,UIImagePickerControllerDelegate, U
     }
     
     @IBAction func addImageTapped(img: AnyObject) {
+        let adder = UIImagePickerController()
+        adder.delegate = self
+        adder.allowsEditing = true
+        adder.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        self.presentViewController(adder, animated: true, completion: nil)
         
-        let vc = UIImagePickerController()
-        vc.delegate = self
-        vc.allowsEditing = true
-        vc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        self.presentViewController(vc, animated: true, completion: nil)
-        
-    }
-    
-    
-    func imagePickerController(picker: UIImagePickerController,
-        didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-            let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-            let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
-            
-            image.image = editedImage
-            dismissViewControllerAnimated(true, completion: { () -> Void in
-            })
-    }
-    
-    func resize(image: UIImage, newSize: CGSize) -> UIImage {
-        let resizeImageView = UIImageView(frame: CGRectMake(0, 0, newSize.width, newSize.height))
-        resizeImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        resizeImageView.image = image
-        
-        UIGraphicsBeginImageContext(resizeImageView.frame.size)
-        resizeImageView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage
     }
     
     @IBAction func composeTapped(sender: AnyObject) {
@@ -70,14 +46,33 @@ class postingViewController: UIViewController,UIImagePickerControllerDelegate, U
             if success {
                 self.image.image = nil
                 self.caption.text = ""
-                
             }
-            else {
-            }
+
         }
     }
+    
+    func PhotoResize(image: UIImage, newSize: CGSize) -> UIImage {
+        let resizing = UIImageView(frame: CGRectMake(0, 0, newSize.width, newSize.height))
+        resizing.contentMode = UIViewContentMode.ScaleAspectFill
+        resizing.image = image
+        
+        UIGraphicsBeginImageContext(resizing.frame.size)
+        resizing.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
 
-
+    func PickImage(picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+            let firstImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            let newImage = info[UIImagePickerControllerEditedImage] as! UIImage
+            
+            image.image = newImage
+            dismissViewControllerAnimated(true, completion: { () -> Void in
+            })
+    }
+    
     /*
     // MARK: - Navigation
 

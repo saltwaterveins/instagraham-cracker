@@ -27,27 +27,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signIn(sender: AnyObject) {
-//        PFUser.logInWithUsername(usernameField.text!, passField.text!) {
-//            (user: PFUser?, error: NSError) -> Void in
-//            if user != nil {
-//                print("You logged in")
-//                self.performSegueWithIdentifier("loginSegue", sender: nil)
-//            }
-//        }
-//        
         PFUser.logInWithUsernameInBackground(usernameField.text!, password: passField.text!) { (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
-                print("You logged in")
                 self.performSegueWithIdentifier("loginSegue", sender: nil)
             }
         }
-        /*PFUser.logInWithUsername(usernameField.text!, password: passField.text!) {
-            (user: PFUser?, error: NSError?) -> Void in
-            if user != nil {
-                print("you are logged in")
-                self.performSegueWithIdentifier("loginSegue", sender: nil)
-            }
-        }*/
+        
     }
 
     @IBAction func signUp(sender: AnyObject) {
@@ -60,22 +45,6 @@ class LoginViewController: UIViewController {
                 print("User created yay!!!")
                 self.performSegueWithIdentifier("loginSegue", sender: nil)
             }
-            else {
-                print(error?.localizedDescription)
-                if error?.code == 202 {
-                    print("Username is taken")
-                }
-            }
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

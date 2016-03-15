@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7FE035E61C8E8CF600A6B636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE035E51C8E8CF600A6B636 /* AppDelegate.swift */; };
-		7FE035E81C8E8CF600A6B636 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE035E71C8E8CF600A6B636 /* ViewController.swift */; };
 		7FE035EB1C8E8CF600A6B636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FE035E91C8E8CF600A6B636 /* Main.storyboard */; };
 		7FE035ED1C8E8CF600A6B636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FE035EC1C8E8CF600A6B636 /* Assets.xcassets */; };
 		7FE035F01C8E8CF600A6B636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FE035EE1C8E8CF600A6B636 /* LaunchScreen.storyboard */; };
@@ -44,7 +43,6 @@
 		5F7F318F58D0545285235977 /* Pods-instagraham-cracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagraham-cracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instagraham-cracker/Pods-instagraham-cracker.debug.xcconfig"; sourceTree = "<group>"; };
 		7FE035E21C8E8CF600A6B636 /* instagraham-cracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "instagraham-cracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE035E51C8E8CF600A6B636 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FE035E71C8E8CF600A6B636 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7FE035EA1C8E8CF600A6B636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7FE035EC1C8E8CF600A6B636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FE035EF1C8E8CF600A6B636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				7FE035E51C8E8CF600A6B636 /* AppDelegate.swift */,
-				7FE035E71C8E8CF600A6B636 /* ViewController.swift */,
 				7FE035E91C8E8CF600A6B636 /* Main.storyboard */,
 				7FE0361B1C97D6D700A6B636 /* postingViewController.swift */,
 				7FE036191C966A1300A6B636 /* userPersonalData.swift */,
@@ -353,7 +350,6 @@
 				7FE0361C1C97D6D700A6B636 /* postingViewController.swift in Sources */,
 				7FE036141C8E984300A6B636 /* LoginViewController.swift in Sources */,
 				7FE036161C962B6D00A6B636 /* FeedCellTableViewCell.swift in Sources */,
-				7FE035E81C8E8CF600A6B636 /* ViewController.swift in Sources */,
 				7FE036181C96331200A6B636 /* InstaViewController.swift in Sources */,
 				7FE035E61C8E8CF600A6B636 /* AppDelegate.swift in Sources */,
 			);
